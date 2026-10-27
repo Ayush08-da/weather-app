@@ -1,0 +1,158 @@
+/* Premium Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0a0f1d; /* Deep midnight blue */
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark Theme World Map Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Live World Map SVG */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15; /* Subtle transparency */
+    filter: invert(1); /* Converts light map to dark map */
+    z-index: -2;
+}
+
+/* Glowing background effect matching the card */
+body::after {
+    content: '';
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, rgba(0,0,0,0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Enlarged Premium Glass Card */
+.weather-card {
+    width: 90%;
+    max-width: 550px; /* Bada aur spacious box */
+    padding: 50px;
+    background: rgba(16, 24, 43, 0.65); /* Map background se match karta hua */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Redesigned Search Bar Layout */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.search input {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 0 25px;
+    height: 65px; /* Bada search box */
+    border-radius: 20px;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+    color: #8fa0b5;
+}
+
+.search input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.search button {
+    border: none;
+    outline: none;
+    background: #38bdf8;
+    color: #0a0f1d;
+    border-radius: 20px;
+    width: 140px; /* Chauda button text ke liye */
+    height: 65px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.search button:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* Bigger Typography */
+.weather-info h2 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.weather-info h1 {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather-info p#description {
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.extra-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 22px;
+    font-size: 18px;
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 500;
+}
+
